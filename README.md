@@ -28,7 +28,7 @@ A modern, minimalist note-taking application that lets users upload, edit, and v
 - **👁️ HTML Rendering** - Automatically render markdown to beautiful HTML with proper formatting
 
 
-## Installation
+## ⬇️ Installation
 
 1. **Clone the repository**
    ```bash
