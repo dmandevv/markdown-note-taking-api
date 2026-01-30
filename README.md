@@ -10,7 +10,7 @@ A modern, minimalist note-taking application that lets users upload, edit, and v
 
 - [About](#-about)
 - [Features](#-features)
-- [Installation](#-installation)
+- [Installation](#%EF%B8%8F-installation)
 - [Usage](#-usage)
 - [Project Structure](#-project-structure)
 - [API Endpoints](#-api-endpoints)
