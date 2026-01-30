@@ -39,5 +39,5 @@ func UploadFileHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	//w.Write([]byte(serverFilePath))
-	http.Redirect(w, r, fmt.Sprintf("/edit/%s", handler.Filename), http.StatusSeeOther)
+	http.Redirect(w, r, fmt.Sprintf("/view/%s", handler.Filename), http.StatusSeeOther)
 }

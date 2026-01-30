@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Markdown File Editing</title>
+</head>
+<body>
+    <form action="/update" method="post" enctype="multipart/form-data">
+        <input type="hidden" id="fileName" name="fileName" value="{{.FileName}}">
+        <textarea id="rawText" name="rawText" rows="50" cols="150">{{.RawText}}</textarea>
+        <input type="submit" value="Update File">
+    </form>
+</body>
+</html>
