@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Markdown File Upload</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Notes</title>
+    <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-    <h1>Upload a Markdown File</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="fileUpload" id="fileUpload" accept=".md, text/markdown">
-        <input type="submit" value="Upload File">
-    </form>
+    <div class="container">
+        <h1>Notes</h1>
+        
+        <h2>Your Files</h2>
+        {{if .}}
+            <ul class="file-list">
+                {{range .}}
+                    <li class="file-item">
+                        <span class="file-name">{{.}}</span>
+                        <div class="file-buttons">
+                            <a href="/view/{{.}}" class="btn-view">View</a>
+                            <a href="/edit/{{.}}" class="btn-edit">Edit</a>
+                        </div>
+                    </li>
+                {{end}}
+            </ul>
+        {{else}}
+            <div class="empty-state">
+                No files yet. Upload one to get started.
+            </div>
+        {{end}}
+        
+        <h2>Upload File</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="fileUpload" id="fileUpload" accept=".md, text/markdown" required>
+            <input type="submit" value="Upload">
+        </form>
+    </div>
 </body>
 </html>

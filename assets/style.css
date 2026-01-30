@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+h2:first-of-type {
+    margin-top: 0;
+}
+
+/* File List Styling */
+ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.file-list {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    margin-bottom: 12px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #e8e8e8;
+    transition: all 0.2s ease;
+}
+
+.file-item:hover {
+    background: #fafafa;
+    border-color: #d8d8d8;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.file-name {
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    flex: 1;
+    word-break: break-all;
+}
+
+.file-buttons {
+    display: flex;
+    gap: 8px;
+    margin-left: 16px;
+}
+
+.file-buttons a {
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.btn-view {
+    background: #333;
+    color: white;
+    border-color: #333;
+}
+
+.btn-view:hover {
+    background: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+.btn-edit {
+    background: transparent;
+    color: #666;
+    border-color: #ddd;
+}
+
+.btn-edit:hover {
+    background: #f0f0f0;
+    color: #333;
+    border-color: #999;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+label {
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input[type="file"],
+input[type="text"],
+input[type="hidden"],
+textarea {
+    padding: 12px 16px;
+    border: 2px solid #e8e8e8;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+input[type="file"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #333;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 400px;
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+}
+
+input[type="submit"],
+button {
+    padding: 12px 16px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background: #1a1a1a;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"]:active,
+button:active {
+    transform: translateY(0);
+}
+
+/* Content Styling */
+.content {
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    color: #1a1a1a;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.content p {
+    margin-bottom: 15px;
+}
+
+.content code {
+    background: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #666;
+}
+
+.content pre {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 15px;
+    border-left: 4px solid #333;
+}
+
+.content pre code {
+    color: inherit;
+    padding: 0;
+    background: none;
+}
+
+.content blockquote {
+    border-left: 4px solid #333;
+    padding-left: 15px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.content ul, .content ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.content li {
+    margin-bottom: 8px;
+}
+
+.content a {
+    color: #333;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.content a:hover {
+    color: #666;
+}
+
+/* Navigation Links */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.nav-buttons a {
+    background: transparent;
+    padding: 8px 14px;
+    border-radius: 4px;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.nav-buttons a:hover {
+    background: #f0f0f0;
+    color: #333;
+    border-color: #999;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    .file-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .file-buttons {
+        margin-left: 0;
+        margin-top: 12px;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .file-buttons a {
+        flex: 1;
+        text-align: center;
+    }
+
+    textarea {
+        min-height: 300px;
+    }
+
+    input[type="file"],
+    input[type="submit"] {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
