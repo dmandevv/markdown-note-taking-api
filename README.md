@@ -10,12 +10,10 @@ A modern, minimalist note-taking application that lets users upload, edit, and v
 
 - [About](#-about)
 - [Features](#-features)
-- [Getting Started](#-getting-started)
-- [Installation](###-installation)
+- [Installation](#-installation)
 - [Usage](#-usage)
 - [Project Structure](#-project-structure)
 - [API Endpoints](#-api-endpoints)
-- [Contributing](#-contributing)
 - [License](#-license)
 
 ## 🚀 About
@@ -30,7 +28,7 @@ A modern, minimalist note-taking application that lets users upload, edit, and v
 - **👁️ HTML Rendering** - Automatically render markdown to beautiful HTML with proper formatting
 
 
-### Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
